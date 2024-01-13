@@ -4,19 +4,20 @@ namespace App\Http\Controllers;
 use App\Http\Requests\DisposisiRequest;
 use App\Models\Disposisi;
 use App\Models\SuratMasuk;
+use Illuminate\Support\Facades\Auth;
 
 class DisposisiController extends Controller
 {
     public function index()
     {
-        $disposisi = Disposisi::with('surat')->get();
+        $disposisi = Disposisi::with('surat_masuk')->where("kepada", Auth::guard('pengguna')->User()->role)->get();
         return view('disposisi.index', compact('disposisi'));
     }
 
     public function store(DisposisiRequest $request)
     {
         $data = [
-            "surat_id" => $request->surat_id,
+            "surat_masuk_id" => $request->surat_id,
             "sifat" => $request->sifat,
             "kepada" => $request->kepada,
             "tindakan" => $request->tindakan,

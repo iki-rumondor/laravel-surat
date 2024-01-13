@@ -57,18 +57,9 @@
                                             Hak Akses
                                         </label>
                                         <select name="role" class="form-control">
-                                            <option value="Super Admin">
-                                                Super Admin
-                                            </option>
-                                            <option value="Sekretaris">
-                                                Sekretaris
-                                            </option>
-                                            <option value="Kasubag">
-                                                Kasubag
-                                            </option>
-                                            <option value="Kadis">
-                                                Kadis
-                                            </option>
+                                            @foreach ($kategori_pengguna as $k)
+                                                <option value="{{ $k }}">{{ $k }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

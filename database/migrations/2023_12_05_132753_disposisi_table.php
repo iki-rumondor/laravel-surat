@@ -15,9 +15,9 @@ class DisposisiTable extends Migration
     {
         Schema::create('disposisi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('surat_id');
-            $table->string('sifat', 32);
+            $table->integer('surat_masuk_id');
             $table->string('kepada', 32);
+            $table->string('sifat', 32);
             $table->string('tindakan', 64);
             $table->string('catatan', 255)->nullable();
             $table->timestamps();

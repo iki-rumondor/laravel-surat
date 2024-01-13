@@ -31,7 +31,16 @@ class PenggunaController extends Controller
      */
     public function create()
     {
-        return view('pengguna.form_create');
+        $kategori_pengguna = [
+            "Super Admin",
+            "Kasubag",
+            "Kadis",
+            "Sekretaris",
+            "Kabid Penanaman Modal",
+            "Kabid Pelayanan Satu Pintu",
+        ];
+
+        return view('pengguna.form_create', compact("kategori_pengguna"));
     }
 
     /**
@@ -48,7 +57,6 @@ class PenggunaController extends Controller
         $password = $penggunaRequest->password;
         $role = $penggunaRequest->role;
         $encryptPassword = bcrypt($password);
-
         # set array
         $data = [
             'nip'=> $nip,

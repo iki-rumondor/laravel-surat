@@ -49,6 +49,7 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                             @foreach($pengguna as $item)
                                 <tr>
                                     <td>{{ $item->nip }}</td>
+                                    <td>{{ $item->nip }}</td>
                                     <td>{{ $item->nama }}</td>
                                     <td>
                                         <span class="badge badge-success">
@@ -58,13 +59,13 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
 
                                     <td>
                                         <a
-                                            href="{{ url('/pengguna/form-ubah/'. $item->id) }}"
+                                            href="{{ url("/pengguna/form-ubah/$item->id") }}"
                                             class="btn btn-sm btn-warning text-white"
                                         >
                                             <i class="fa fa-edit"></i> Ubah
                                         </a>
                                         <a
-                                            href="{{ url('/pengguna/hapus/{'. $item->id) }}"
+                                            href="{{ url('/pengguna/hapus/'. $item->id) }}"
                                             class="btn btn-sm btn-danger"
                                             onclick="event.preventDefault();
                                             document.getElementById('delete-form').submit();"

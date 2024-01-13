@@ -39,15 +39,15 @@
     <table class="border" style="border-collapse: collapse; width: 100%;">
         <tr>
             <td class="border p-1 w-50">
-                <p>Surat Dari : <b>{{ $disposisi->surat->unit }}</b></p>
+                <p>Surat Dari : <b>{{ $disposisi->surat_masuk->unit }}</b></p>
             </td>
             <td class="border p-1 w-50">
-                <p>Diterima Tanggal : <b>{{ date('d-m-Y', strtotime($disposisi->surat->tanggal_terima)) }}</b></p>
+                <p>Diterima Tanggal : <b>{{ date('d-m-Y', strtotime($disposisi->surat_masuk->tanggal_terima)) }}</b></p>
             </td>
         </tr>
         <tr>
             <td class="border p-1 w-50">
-                <p>Tanggal Surat :  <b>{{ date('d-m-Y', strtotime($disposisi->surat->tanggal_surat)) }}</b></p>
+                <p>Tanggal Surat :  <b>{{ date('d-m-Y', strtotime($disposisi->surat_masuk->tanggal_surat)) }}</b></p>
             </td>
             <td class="border p-1 w-50">
                 <p>Sifat : <b>{{ $disposisi->sifat }}</b></p>
@@ -55,7 +55,7 @@
         </tr>
         <tr>
             <td colspan="2" style="padding: 5px 10px ; border:1px solid black; width: 50%;">
-                <p style="">Perihal : <b>{{ $disposisi->surat->perihal }}</b></p>
+                <p style="">Perihal : <b>{{ $disposisi->surat_masuk->perihal }}</b></p>
             </td>
         </tr>
         <tr>

@@ -188,13 +188,9 @@
                         <div class="form-group">
                             <label for="kepada">Diteruskan Kepada Saudara</label>
                             <select name="kepada" class="form-control" id="kepada">
-                                <option>Sekretaris</option>
-                                <option>Kabid Penanaman Modal & Promosi</option>
-                                <option>Kabid Pelayanan Terpadu Satu Pintu</option>
-                                <option>Kabid Penempatan, Perluasan Kesempatan Kerja dan Hubungan Jamsostek</option>
-                                <option>Kasubag Perencanaan Program</option>
-                                <option>Kasubag Keuangan</option>
-                                <option>Kasubag Umum & Kepegawaian</option>
+                                @foreach ($kategori_pengguna as $k)
+                                    <option value="{{ $k }}">{{ $k }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

@@ -40,7 +40,7 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                                 <th scope="col">Opsi</th>
                             </tr>
                         </thead>
-                        
+
                         <tbody>
                             @foreach ($disposisi as $item)
                                 <tr>
@@ -50,7 +50,7 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                                     <td>
                                         <button
                                             id="btnDetailSurat"
-                                            data-id-surat="{{ $item->surat->id }}" data-toggle="modal"
+                                            data-id-surat="{{ $item->surat_masuk->id }}" data-toggle="modal"
                                             data-target="#detailModal" type="button"
                                             class="btn btn-sm btn-primary d-flex-inline align-items-center">
                                             <i class="fa fa-file mr-2"></i> Lihat Surat
@@ -59,7 +59,7 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                                     </td>
                                 </tr>
                             @endforeach
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -75,12 +75,11 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title fw-bold">Asal Surat : <span id="asal_surat"></span></h4>
+                          <h4 class="card-title fw-bold">Asal Surat : <span id="unit_surat"></span></h4>
                         </div>
                         <ul class="list-group list-group-flush">
                           <li class="list-group-item">Kategori: <span id="kategori_surat"></span> </li>
                           <li class="list-group-item">Jenis: <span id="jenis_surat"></span> </li>
-                          <li class="list-group-item">Unit: <span id="unit_surat"></span> </li>
                           <li class="list-group-item">Tanggal Surat: <span id="tgl_surat"></span> </li>
                           <li class="list-group-item">Tanggal Terima: <span id="tgl_terima"></span> </li>
                           <li class="list-group-item">Perihal: <span id="perihal_surat"></span></li>

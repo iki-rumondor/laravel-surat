@@ -66,10 +66,16 @@ class SuratMasukController extends Controller
             "Surat Harian",
         ];
 
+        $kategori_pengguna = [
+            "Sekretaris",
+            "Kabid Penanaman Modal",
+            "Kabid Pelayanan Satu Pintu",
+        ];
+
         if ($request->cetak == 'cetak') {
             return view('surat_masuk.index', compact('filter_year', 'filter_text', 'suratMasuk', 'jenis'));
         } else {
-            return view('surat_masuk.surat_masuk', compact('filter_year', 'filter_text', 'suratMasuk', 'jenis'));
+            return view('surat_masuk.surat_masuk', compact('filter_year', 'filter_text', 'suratMasuk', 'jenis', 'kategori_pengguna'));
         }
     }
 

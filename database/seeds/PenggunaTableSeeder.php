@@ -41,6 +41,18 @@ class PenggunaTableSeeder extends Seeder
                     'password' => bcrypt('sekretaris'),
                     'role' => 'Sekretaris'
                 ],
+                [
+                    'nama'=>'Kabid Penanaman Modal',
+                    'nip'=>'KPM001',
+                    'password' => bcrypt('kabidmodal'),
+                    'role' => 'Kabid Penanaman Modal'
+                ],
+                [
+                    'nama'=>'Kabid Pelayanan Satu Pintu',
+                    'nip'=>'KPSP001',
+                    'password' => bcrypt('kabidpintu'),
+                    'role' => 'Kabid Pelayanan Satu Pintu'
+                ],
             ]);
     }
 }

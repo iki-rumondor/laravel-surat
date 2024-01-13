@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <!-- left navbar -->
         <ul class="navbar-nav mr-auto">
-            @if (Auth::guard('pengguna')->User()->role != 'Sekretaris')
+            @if (Auth::guard('pengguna')->User()->role == 'Kadis' || Auth::guard('pengguna')->User()->role == 'Kasubag' || Auth::guard('pengguna')->User()->role == 'Super Admin')
                 <li class="nav-item {{ Request::segment(1) == 'surat-masuk' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/surat-masuk') }}">
                         <i class="fa fa-envelope"></i> Surat Masuk
@@ -49,7 +49,7 @@
                     </a>
                 </li>
             @endif
-            @if (Auth::guard('pengguna')->User()->role == 'Super Admin' || Auth::guard('pengguna')->User()->role == 'Sekretaris')
+            @if (Auth::guard('pengguna')->User()->role == 'Sekretaris' || Auth::guard('pengguna')->User()->role == 'Kabid Penanaman Modal' || Auth::guard('pengguna')->User()->role == 'Kabid Pelayanan Satu Pintu')
                 <li class="nav-item {{ Request::segment(1) == 'disposisi' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/disposisi') }}">
                         <i class="fa fa-file"></i> Disposisi
