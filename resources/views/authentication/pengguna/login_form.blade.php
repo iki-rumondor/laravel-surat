@@ -103,7 +103,7 @@
                 </div>
                 <center>
                 <p style="font-size: 12px;">
-                    Elektronik Arsip Dokumen Perencanaan & Penganggaran
+                    Elektronik Arsip Dokumen Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu
                 </p>
                 </center>
             </div>

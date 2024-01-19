@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <!-- left navbar -->
         <ul class="navbar-nav mr-auto">
-            @if (Auth::guard('pengguna')->User()->role == 'Kadis' || Auth::guard('pengguna')->User()->role == 'Kasubag' || Auth::guard('pengguna')->User()->role == 'Super Admin')
+            @if (Auth::guard('pengguna')->User()->role == 'Kadis' || Auth::guard('pengguna')->User()->role == 'Kasubag')
                 <li class="nav-item {{ Request::segment(1) == 'surat-masuk' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/surat-masuk') }}">
                         <i class="fa fa-envelope"></i> Surat Masuk
