@@ -9,7 +9,7 @@ class PrintController extends Controller
 {
     public function disposisi($id)
     {
-        $logo_bonbol = base64_encode(file_get_contents(public_path('img\logo-bonbol.jpg')));
+        $logo_bonbol = base64_encode(file_get_contents(public_path('img/logo-bonbol.jpg')));
         $disposisi = Disposisi::with('surat_masuk')->find($id);
         $data = [
             'logo_bonbol' => $logo_bonbol,
