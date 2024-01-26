@@ -44,7 +44,6 @@ class SuratKeluarController extends Controller
     public function store(SuratKeluarRequest $request)
     {
         $data = [
-            'kategori' => $request->kategori,
             'unit' => $request->unit,
             'jenis' => $request->jenis,
             'tanggal_surat' => $request->tanggal_surat,
@@ -91,8 +90,7 @@ class SuratKeluarController extends Controller
         # set variable
         $nomor = $suratKeluarRequest->nomor;
         $tujuan = $suratKeluarRequest->tujuan;
-        $unitID = $suratKeluarRequest->unit_id;
-        $kategoriID = $suratKeluarRequest->kategori_id;
+        $unit = $suratKeluarRequest->unit;
         $perihal = $suratKeluarRequest->perihal;
         $tanggalKirim = $suratKeluarRequest->tanggal_kirim;
         $lampiranFile = $suratKeluarRequest->lampiran;
@@ -125,8 +123,7 @@ class SuratKeluarController extends Controller
 
             # set array data
             $data = [
-                'unit_id' => $unitID,
-                'kategori_id' => $kategoriID,
+                'unit' => $unit,
                 'nomor' => $nomor,
                 'tujuan' => $tujuan,
                 'perihal' => $perihal,
@@ -139,8 +136,7 @@ class SuratKeluarController extends Controller
         }else{
             # set array data
             $data = [
-                'unit_id' => $unitID,
-                'kategori_id' => $kategoriID,
+                'uint' => $unit,
                 'nomor' => $nomor,
                 'tujuan' => $tujuan,
                 'perihal' => $perihal,

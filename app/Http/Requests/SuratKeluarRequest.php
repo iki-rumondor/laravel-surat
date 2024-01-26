@@ -25,7 +25,6 @@ class SuratKeluarRequest extends FormRequest
     {
         return [
             'unit' => 'required',
-            'kategori' => 'required',
             'perihal' => 'required',
             'tanggal_surat' => 'required',
             'tanggal_keluar' => 'required',

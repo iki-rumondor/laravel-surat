@@ -57,7 +57,7 @@ class SuratMasukController extends Controller
                     )"));
                 }
             })
-            ->orderBy('created_at', 'desc')
+            ->orderBy('status', 'asc')
             ->paginate(5);
 
         $jenis = [
@@ -94,7 +94,7 @@ class SuratMasukController extends Controller
     {
         # set array data
         $data = [
-            'kategori' => $request->kategori,
+            // 'kategori' => $request->kategori,
             'unit' => $request->unit,
             'jenis' => $request->jenis,
             'tanggal_surat' => $request->tanggal_surat,
@@ -144,7 +144,6 @@ class SuratMasukController extends Controller
         # set variable
         $nomor = $suratMasukRequest->nomor;
         $unit = $suratMasukRequest->unit;
-        $kategori = $suratMasukRequest->kategori;
         $perihal = $suratMasukRequest->perihal;
         $tanggalTerima = $suratMasukRequest->tanggal_terima;
         $lampiranFile = $suratMasukRequest->lampiran;
@@ -172,7 +171,6 @@ class SuratMasukController extends Controller
             # set array data
             $data = [
                 'unit' => $unit,
-                'kategori' => $kategori,
                 'nomor' => $nomor,
                 'perihal' => $perihal,
                 'tanggal_terima' => $tanggalTerima,
@@ -185,7 +183,6 @@ class SuratMasukController extends Controller
             # set array data
             $data = [
                 'unit' => $unit,
-                'kategori' => $kategori,
                 'nomor' => $nomor,
                 'perihal' => $perihal,
                 'tanggal_terima' => $tanggalTerima

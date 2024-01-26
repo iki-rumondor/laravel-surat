@@ -16,6 +16,7 @@ class DisposisiController extends Controller
 
     public function store(DisposisiRequest $request)
     {
+
         $data = [
             "surat_masuk_id" => $request->surat_id,
             "sifat" => $request->sifat,

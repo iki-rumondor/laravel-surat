@@ -14,7 +14,6 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Kategori</th>
                         <th scope="col">Asal Surat</th>
                         <th scope="col">Jenis</th>
                         <th scope="col">Tanggal Surat</th>
@@ -31,7 +30,6 @@
                     @endif
                     @foreach($suratMasuk as $item)
                     <tr>
-                        <td>{{ $item->kategori }}</td>
                         <td>{{ $item->unit }}</td>
                         <td>{{ $item->jenis }}</td>
                         <td>{{ date('d-m-Y', strtotime($item->tanggal_surat)) }}</td>

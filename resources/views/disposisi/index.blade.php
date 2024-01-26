@@ -78,7 +78,6 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                           <h4 class="card-title fw-bold">Asal Surat : <span id="unit_surat"></span></h4>
                         </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Kategori: <span id="kategori_surat"></span> </li>
                           <li class="list-group-item">Jenis: <span id="jenis_surat"></span> </li>
                           <li class="list-group-item">Tanggal Surat: <span id="tgl_surat"></span> </li>
                           <li class="list-group-item">Tanggal Terima: <span id="tgl_terima"></span> </li>
@@ -106,7 +105,6 @@ Dashboard &raquo; Pengguna | Aplikasi Manajemen Surat
                 .then(response => response.json())
                 .then(data => {
                     $("#no_surat").text(data.nomor)
-                    $("#kategori_surat").text(data.kategori)
                     $("#jenis_surat").text(data.jenis)
                     $("#unit_surat").text(data.unit)
                     $("#tgl_surat").text(data.tanggal_surat)

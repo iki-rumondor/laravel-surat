@@ -16,7 +16,6 @@ class CreateSuratKeluarTable extends Migration
         Schema::create('surat_keluar', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('jenis', 75);
-            $table->string('kategori', 75);
             $table->string('unit', 75);
             // $table->string('nomor', 75);
             $table->date('tanggal_surat');

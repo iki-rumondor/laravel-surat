@@ -26,23 +26,6 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-xs-12">
-                                        <label for="kategori">Kategori</label>
-                                        <input type="text" name="kategori"
-                                            class="form-control {{ $errors->has('kategori') ? ' is-invalid' : '' }}"
-                                            value="{{ old('kategori') }}" />
-                                        @if ($errors->has('kategori'))
-                                            <span class="invalid-feedback">
-                                                <strong>
-                                                    {{ $errors->first('kategori') }}
-                                                </strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-xs-12">
                                         <label for="unit">Asal Surat</label>
                                         <input type="text" name="unit"
                                             class="form-control {{ $errors->has('unit') ? ' is-invalid' : '' }}"

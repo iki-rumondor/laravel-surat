@@ -62,8 +62,7 @@
                                         </select>
                                     </div> --}}
                                     <div class="form-group mb-2">
-                                        <select name="filter_year" id="filter_year" class="form-control"
-                                            style="width: 100px">
+                                        <select name="filter_year" id="filter_year" class="form-control">
                                             <option value="">--- Filter Year ---</option>
                                             @for ($y = 2019; $y <= date('Y'); $y++)
                                                 <option value="{{ $y }}"
@@ -72,13 +71,7 @@
                                             @endfor
                                         </select>
                                     </div>
-                                    <div class="form-group mb-2">
-                                        <input type="text" name="filter_text" class="form-control"
-                                            placeholder="Masukkan kata kunci" style="width: 250px"
-                                            value="{{ $filter_text }}">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mb-2">Tampilkan</button>
-                                    <button type="submit" class="btn btn-primary mb-2 ms-2" name="cetak"
+                                    <button type="submit" class="btn btn-primary mb-2 ml-2" name="cetak"
                                         value="cetak">Cetak
                                         PDF</button>
                                 </form>
@@ -92,10 +85,9 @@
                             <hr />
                         @endif
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-striped table-bordered" id="datatable">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Kategori</th>
                                         <th scope="col">Unit</th>
                                         <th scope="col">Jenis</th>
                                         {{-- <th scope="col">Nomor</th> --}}
@@ -116,7 +108,6 @@
                                     @endif
                                     @foreach ($suratMasuk as $item)
                                         <tr>
-                                            <td>{{ $item->kategori }}</td>
                                             <td>{{ $item->unit }}</td>
                                             <td>{{ $item->jenis }}</td>
                                             {{-- <td>{{ $item->nomor }}</td> --}}
@@ -140,7 +131,7 @@
                                                     @if ($item->status == 'Disimpan')
                                                         <button data-id-surat="{{ $item->id }}" data-toggle="modal"
                                                             data-target="#addModal" type="button"
-                                                            class="btn btn-sm btn-primary d-flex align-items-center">
+                                                            class="btn-disposisi btn btn-sm btn-primary d-flex align-items-center">
                                                             <i class="fa fa-file mr-2"></i> Disposisi
                                                         </button>
                                                     @endif
@@ -224,12 +215,9 @@
 
 @section('js')
     <script>
-        $('#addModal').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget);
-            var idSurat = button.data('id-surat');
-
-            var modal = $(this);
-            modal.find('#modalIDSurat').val(idSurat);
+        $('.btn-disposisi').click(function() {
+            var idSurat = $(this).data('id-surat');
+            $('#modalIDSurat').val(idSurat);
         });
     </script>
 @endsection

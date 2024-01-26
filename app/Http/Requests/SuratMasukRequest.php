@@ -25,7 +25,6 @@ class SuratMasukRequest extends FormRequest
     {
         return [
             'unit' => 'required',
-            'kategori' => 'required',
             'perihal' => 'required',
             'tanggal_surat' => 'required',
             'tanggal_terima' => 'required',
@@ -42,7 +41,6 @@ class SuratMasukRequest extends FormRequest
     {
         return [
             'unit.required' => 'Unit Perlu diisi!',
-            'kategori.required' => 'Kategori perlu diisi!',
             'perihal.required' => 'Perihal perlu diisi!',
             'tanggal_surat.required' => 'Tanggal surat perlu diisi!',
             'tanggal_terima.required' => 'Tanggal terima perlu diisi!',
